@@ -2,7 +2,10 @@ import "./style.css"
 
 function TalkToUs(){
     return (
-        <h1>Talk To Us</h1>
+        <div className="container container-talk-to-us">
+            <h1>Talk To Us</h1>
+        </div>
+
     )
 }
 

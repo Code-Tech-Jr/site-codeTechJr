@@ -2,7 +2,10 @@ import "./style.css"
 
 function WhyChooseUs(){
     return (
-        <h1>Why Choose Us</h1>
+        <div className="container container-why-choose-us">
+            <h1>Why Choose Us</h1>
+        </div>
+
     )
 }
 

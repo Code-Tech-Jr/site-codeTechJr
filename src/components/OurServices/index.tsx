@@ -2,7 +2,10 @@ import "./style.css"
 
 function OurServices(){
     return (
-        <h1>Our Services</h1>
+        <div className="container container-our-services">
+            <h1>Our Services</h1>
+        </div>
+        
     )
 }
 

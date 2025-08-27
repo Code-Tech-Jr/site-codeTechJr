@@ -1,8 +1,11 @@
+import "../../assets/styles/global.css"
 import "./style.css"
 
 function Footer() {
     return (
-        <h1>Footer</h1>
+        <div className="container container-footer">
+            <h1>Footer</h1>
+        </div>
     )
 }
 

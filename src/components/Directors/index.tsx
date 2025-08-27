@@ -1,8 +1,12 @@
+import "../../assets/styles/global.css"
 import "./style.css"
 
 function Directors() {
     return (
-        <h1>Directors</h1>
+        <div className="container container-directors">
+            <h1>Directors</h1>
+        </div>
+        
     )
 }
 

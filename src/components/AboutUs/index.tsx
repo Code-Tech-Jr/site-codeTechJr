@@ -1,9 +1,13 @@
+import "../../assets/styles/global.css"
 import "./style.css"
+
 
 function AboutUs() {
     return(
-
-        <h1>About Us</h1>
+        <div className="container container-about-us">
+            <h1>About Us</h1>
+        </div>
+        
 
     )
 }
