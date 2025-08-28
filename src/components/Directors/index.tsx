@@ -3,7 +3,7 @@ import "./style.css"
 
 function Directors() {
     return (
-        <div className="container container-directors">
+        <div className="container-directors">
             <h1>Directors</h1>
         </div>
         

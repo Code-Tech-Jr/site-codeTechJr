@@ -15,16 +15,18 @@ import "../../assets/styles/global.css"
 function App() {
 
   return(
-    <div className="container">
-      <Header/>
-      <Hero/>
-      <AboutUs/>
-      <OurServices/>
-      <WhyChooseUs/>
-      <TalkToUs/>
-      <Directors/>
+    <>
+      <div className="container">
+        <Header/>
+        <Hero/>
+        <AboutUs/>
+        <OurServices/>
+        <WhyChooseUs/>
+        <TalkToUs/>
+        <Directors/>
+      </div>
       <Footer/>
-    </div>
+    </>
   );
 }
 

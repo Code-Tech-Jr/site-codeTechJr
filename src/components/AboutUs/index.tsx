@@ -4,7 +4,7 @@ import "./style.css"
 
 function AboutUs() {
     return(
-        <div className="container container-about-us">
+        <div className="container-about-us">
             <h1>About Us</h1>
         </div>
         

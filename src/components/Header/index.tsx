@@ -1,20 +1,22 @@
 import "../../assets/styles/global.css"
 import "./style.css"
+import Button from "../Button/index"
 
 function Header() {
     return (
-        <div className="container header-container">
+        <div className="header-container">
             <div className="logo">
                 <img src="src/assets/images/logo1.png" alt="logo" />
             </div>
             <div className="mid-buttons">
-                <a className="nav buttons">ÍNICIO</a>
-                <a className="nav buttons">SOBRE</a>
-                <a className="nav buttons">SERVIÇOS</a>
-                <a className="nav buttons">CONTATO</a>
+                <Button href="#" nomeDoBotao="ÍNCIO" variant="nav"></Button>
+                <Button href="#" nomeDoBotao="SOBRE" variant="nav"></Button>
+                <Button href="#" nomeDoBotao="SERVIÇOS" variant="nav"></Button>
+                <Button href="#" nomeDoBotao="CONTATO" variant="nav"></Button>
+
             </div>
-            <div className="right-button buttons">
-                FALE CONOSCO
+            <div className="right-button">
+                <Button href="#" nomeDoBotao="FALE CONOSCO" variant="header"></Button>
             </div>
         </div>
     );

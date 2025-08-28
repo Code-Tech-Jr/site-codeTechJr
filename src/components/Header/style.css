@@ -1,54 +1,24 @@
 .header-container{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    height: var(--header-h);
-    color: white;
-    padding: 2em 0 0 0;
-}
-
-.buttons{
-    all: unset;
-    cursor: pointer;
-    font-family: 'Montserrat';
-    font-size: 1.3em;
-    font-weight: 600;
-
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-h);
+  color: white;
+  padding: 2em 0 0 0;
 }
 
 .mid-buttons {
   padding: 1em;
   border-radius: 1em;
 }
-
 .logo {
   flex-shrink: 0;
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 300px;
   height: auto;
   display: block;
-}
-
-.nav{
-    margin: 0 1.5em 0 1.5em;
-    transition: text-shadow 0.3s ease;
-    &:hover{
-        text-shadow: 0 0 3px #fff,
-               0 0 6px #0ff;
-    }
-}
-
-.right-button {
-    padding: 10px;
-    border: 0.1em solid var(--second-color);
-    color: var(--second-color);
-    transition: background-color 0.5s ease, color 0.5s ease; /* 0.5 segundos */
-    &:hover{
-        background-color: var(--second-color);
-        color: white;
-    }
 }
 
 

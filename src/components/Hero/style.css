@@ -1,5 +1,4 @@
 .container-hero{
     background-color: blue;
     height: var(--hero-h);
-    padding: 0;
 }

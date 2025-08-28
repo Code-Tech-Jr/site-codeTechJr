@@ -1,0 +1,29 @@
+.header{
+    text-decoration: none;
+    padding: 10px;
+    border: 0.1em solid var(--second-color);
+    color: var(--second-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover{
+        background-color: var(--second-color);
+        color: white;
+    }
+}
+
+.nav{
+    color: var(--four-color);
+    margin: 0 1.5em 0 1.5em;
+    transition: text-shadow 0.3s ease;
+    &:hover{
+        text-shadow: 0 0 3px #fff,
+                0 0 6px #0ff;
+    }
+}
+
+.buttons{
+  cursor: pointer;
+  font-family: var(--std-font);
+  font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+}
