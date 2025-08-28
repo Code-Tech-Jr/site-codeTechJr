@@ -20,9 +20,9 @@
     }
 }
 
-.buttons{
+.button{
   cursor: pointer;
-  font-family: var(--std-font);
+  font-family: var(--main-font);
   font-size: 1.3em;
   font-weight: 600;
   text-decoration: none;
