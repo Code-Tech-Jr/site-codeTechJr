@@ -1,0 +1,25 @@
+.header-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-h);
+  color: white;
+  padding: 2em 0 0 0;
+}
+
+.mid-buttons {
+  padding: 1em;
+  border-radius: 1em;
+}
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+
+

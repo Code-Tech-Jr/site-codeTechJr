@@ -1,0 +1,27 @@
+:root {
+  /*colors*/
+  --main-color: #1A1E29;
+  --second-color:#01C38E;
+  --third-color: #132D46;
+  --four-color: #fff;
+
+  /*fonts*/
+  --std-font: 'Montserrat';
+  --title-font: 'Russo One';
+  
+  /*dimensions*/
+  --header-h: 15vh;
+  --hero-h: calc(100vh - var(--header-h));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 100vw;
+  background-color: var(--main-color);
+  padding: 0 8em 0 8em;
+}
