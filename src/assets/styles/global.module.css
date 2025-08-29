@@ -6,12 +6,12 @@
   --four-color: #fff;
 
   /*fonts*/
-  --std-font: 'Montserrat';
+  --main-font: 'Montserrat';
   --title-font: 'Russo One';
   
   /*dimensions*/
-  --header-h: 15vh;
-  --hero-h: calc(100vh - var(--header-h));
+  --header-height: 15vh;
+  --hero-height: calc(100vh - var(--header-height));
 }
 
 * {

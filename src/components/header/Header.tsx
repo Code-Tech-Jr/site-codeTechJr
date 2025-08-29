@@ -1,21 +1,22 @@
-import "../../assets/styles/global.css"
-import "./style.css"
-import Button from "../Button/index"
+import global from "../../assets/styles/global.module.css"
+
+import styles from "./Header.module.css"
+import Button from "../button/Button"
 
 function Header() {
     return (
-        <div className="header-container">
-            <div className="logo">
+        <div className={styles["header-container"]}>
+            <div className={styles.logo}>
                 <img src="src/assets/images/logo1.png" alt="logo" />
             </div>
-            <div className="mid-buttons">
+            <div className={styles["mid-buttons"]}>
                 <Button href="#" nomeDoBotao="ÍNCIO" variant="nav"></Button>
                 <Button href="#" nomeDoBotao="SOBRE" variant="nav"></Button>
                 <Button href="#" nomeDoBotao="SERVIÇOS" variant="nav"></Button>
                 <Button href="#" nomeDoBotao="CONTATO" variant="nav"></Button>
 
             </div>
-            <div className="right-button">
+            <div className={styles["right-button"]}>
                 <Button href="#" nomeDoBotao="FALE CONOSCO" variant="header"></Button>
             </div>
         </div>
