@@ -1,4 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Neucha&display=swap');
+
+
 .container-directors{
-    height: 40vh;
-    background-color: blue;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2em;
+    gap: 2.5em;
+}
+
+.director
+{
+    background-color: #1A1E29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 7em;
+}
+
+.lideres-title
+{
+    text-align: center;
+    font-family: "Monteserrat", sans-serif;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    font-weight: 800;
+    font-size: 45px;
+    color: #01C38E;
 }

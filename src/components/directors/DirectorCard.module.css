@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Neucha&display=swap');
+
+.director-card-container
+{
+    display:flex;
+    flex-direction: column;
+    background-color: #132D46;
+    border-radius: 28px;
+    justify-content: center;
+    align-items: center;
+    width: 14em;
+    height: 22em;
+    transition: transform 0.15s ease;
+    transform-style: preserve-3d;   
+
+}
+
+.director-card-image
+{
+    border-radius: 50%;
+    border-color: linear-gradient(#0093DD, #132D46);
+    width: 12em;
+    height: 12em;
+}
+
+.director-card-position
+{
+    font-weight: 600;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-color: #132D46;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 3em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.director-card-name
+{
+    color: #FFFFFF;
+    background-color: #132D46;
+    font-family: "Montserrat";
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 250;
+}
+
