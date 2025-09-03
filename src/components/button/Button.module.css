@@ -20,6 +20,26 @@
     }
 }
 
+.hero {
+    text-decoration: none;
+    background-color: var(--second-color);
+    color: #ffff;
+    border: 0.1em solid var(--second-color);
+    padding: 20px;
+    width: 9em;
+    font-size: 2em !important;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    white-space: pre-line;
+    display: inline-block;
+    text-align: center;
+    word-wrap: break-word; 
+
+    &:hover {
+        background-color: var(--main-color);
+        color: var(--second-color);
+    }
+}
+
 .button{
   cursor: pointer;
   font-family: var(--main-font);
