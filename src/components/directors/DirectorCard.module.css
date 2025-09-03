@@ -10,9 +10,8 @@
     align-items: center;
     width: 14em;
     height: 22em;
-    transition: transform 0.15s ease;
+    transition: transform 0.3s ease;
     transform-style: preserve-3d;   
-
 }
 
 .director-card-image
@@ -51,5 +50,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 250;
+}
+
+.director-card-container:hover
+{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5); 
+    cursor: pointer;
+    cursor:default;
 }
 
