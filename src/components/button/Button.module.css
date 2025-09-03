@@ -1,3 +1,11 @@
+.button{
+  cursor: pointer;
+  font-family: var(--main-font);
+  font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .header{
     text-decoration: none;
     padding: 10px;
@@ -21,18 +29,14 @@
 }
 
 .hero {
-    text-decoration: none;
     background-color: var(--second-color);
     color: #ffff;
     border: 0.1em solid var(--second-color);
     padding: 20px;
     width: 9em;
-    font-size: 2em !important;
+    font-size: 2em;
     transition: background-color 0.5s ease, color 0.5s ease;
-    white-space: pre-line;
-    display: inline-block;
     text-align: center;
-    word-wrap: break-word; 
 
     &:hover {
         background-color: var(--main-color);
@@ -40,10 +44,3 @@
     }
 }
 
-.button{
-  cursor: pointer;
-  font-family: var(--main-font);
-  font-size: 1.3em;
-  font-weight: 600;
-  text-decoration: none;
-}

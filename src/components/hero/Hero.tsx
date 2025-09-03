@@ -7,8 +7,8 @@ function Hero() {
         <div className={styles["container-hero"]}>
             <h1 className={styles["hero-title"]}>A tecnologia que{'\n'} fala a <span className={styles["highlight"]}>sua</span> língua</h1>
             <div className={styles["hero-buttons"]}>
-                <Button nomeDoBotao="NOSSOS SERVIÇOS" href="#container-our-services" variant="hero"/>
-                <Button nomeDoBotao="ENTRE EM CONTATO" href="#container-talk-to-us" variant="hero"/>
+                <Button nomeDoBotao="NOSSOS SERVIÇOS" href="#ourServices" variant="hero"/>
+                <Button nomeDoBotao="ENTRE EM CONTATO" href="#talkToUs" variant="hero"/>
             </div>
         </div>
         

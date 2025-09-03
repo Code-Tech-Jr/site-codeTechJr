@@ -10,17 +10,42 @@
 }
 
 .mid-buttons {
-  padding: 1em;
+  position: fixed;
+  top: 3.7em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.9em 1.5em;
   border-radius: 1em;
+  backdrop-filter: blur(15px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+
 }
+
 .logo {
   flex-shrink: 0;
+  z-index: 99999;
 }
 
 .logo img {
   max-width: 300px;
   height: auto;
   display: block;
+}
+.right-button{
+  z-index: 99999;
+}
+
+.at-top{
+  position: fixed;
+  top: 3.7em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.9em 1.5em;
+  z-index: 9999;
+
 }
 
 

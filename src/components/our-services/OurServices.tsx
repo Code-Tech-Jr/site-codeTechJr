@@ -4,7 +4,7 @@ import styles from "./OurServices.module.css"
 
 function OurServices(){
     return (
-        <div className={styles["container-our-services"]}>
+        <div className={styles["container-our-services"]} id="ourServices">
             <h1>Our Services</h1>
         </div>
         
