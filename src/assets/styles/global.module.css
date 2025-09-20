@@ -25,3 +25,9 @@
   background-color: var(--main-color);
   padding: 0 8em 0 8em;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 15em;
+}
+

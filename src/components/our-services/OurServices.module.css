@@ -1,4 +1,26 @@
 .container-our-services{
-    background-color: crimson;
-    height: 30vh;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-container{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+}
+
+.our-services-title {
+    text-align: center;
+    color: var(--second-color);
+    font-family: "Raleway";
+    font-size: clamp(2rem, 1.8vw, 4rem);
+    font-weight: 800;
+    font-size: 64px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
 }

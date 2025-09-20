@@ -3,7 +3,7 @@ import Card from "./Card.tsx"
 
 function AboutUs() {
     return(
-        <div className={styles["container-about-us"]}>  
+        <div className={styles["container-about-us"]} id="aboutUs">  
             <div className={styles["about-us-container"]}>
                 <Card 
                     imgSrc="src/assets/images/aboutUsPlaceHolder.png" 
