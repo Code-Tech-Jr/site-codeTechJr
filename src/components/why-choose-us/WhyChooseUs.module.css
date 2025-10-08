@@ -12,7 +12,8 @@
     background-color: #101520;
     position: relative;
     border-radius: 28px;
-    width: 100em;
+    width: 100%;
+    max-width: 96.5em;
     height: 35em;
     padding: 2em;
     display: flex;
@@ -36,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 12.5em;
+    gap: clamp(4rem, 10vw, 15em);
 }
 
 .items-container > div {
@@ -46,6 +47,10 @@
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
 }
 
 .items-container img {
@@ -53,4 +58,53 @@
     height: auto;
     padding: none;
     margin-bottom: 0.5em;
+}
+
+@media(max-width: 1900px) {
+    .inner-container {
+        padding: 1em 0.5em;
+        width: 95%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .inner-container {
+        width: 90%;
+        padding: 2em 1em;
+        height: 40em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why-choose-us-title {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+    }
+
+    .items-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .items-container > div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2em;
+        width: 80%;
+        font-size: 2em;
+        white-space: nowrap;
+    }
+
+    .items-container > div:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    .items-container img {
+        width: 140px;
+        margin-bottom: 0em;
+    }
 }
