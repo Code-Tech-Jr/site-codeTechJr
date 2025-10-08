@@ -1,4 +1,3 @@
-import global from "../../assets/styles/global.module.css"
 import styles from "./OurServices.module.css"
 import ServiceCard from "./ServiceCard.tsx"
 
