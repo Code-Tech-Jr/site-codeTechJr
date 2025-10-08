@@ -36,7 +36,7 @@
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  z-index: 2; /* Garante que esta coluna fique na frente da imagem */
+  z-index: 2;
 }
 
 .title {
@@ -82,12 +82,12 @@
   flex: 1;
   min-width: 300px;
   max-width: 450px;
-  z-index: 2; /* Garante que o formulário fique na frente da imagem */
+  z-index: 2;
 }
 
 .form {
-  position: relative; /* CORREÇÃO: Para garantir que o formulário fique na frente */
-  z-index: 2; /* CORREÇÃO: Coloca o formulário sobre a imagem */
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 0.8em;
@@ -175,9 +175,8 @@
   }
 
   .background-logo {
-    width: 80%;   /* Controla a largura para não vazar */
-    height: auto; /* Deixa a altura se ajustar automaticamente */
-  
-    top: 65%;     /* Ajusta a posição vertical */
+    width: 80%;
+    height: auto;
+    top: 65%;
   }
 }

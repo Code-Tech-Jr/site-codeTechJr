@@ -9,7 +9,6 @@ function TalkToUs() {
   return (
     <div className={styles["container-talk-to-us"]} id="talkToUs">
       <div className={styles["content-wrapper"]}>
-
         <div className={styles["info-section"]}>
           <h1 className={styles.title}>Fale conosco</h1>
           <p className={styles.subtitle}>
