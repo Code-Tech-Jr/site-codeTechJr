@@ -24,9 +24,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-  height: 120%;
-  opacity: 0.2;
-  z-index: 1;
+  height: 110%;
+  opacity: 0.15;
+  z-index: 1; 
   pointer-events: none; 
 }
 
@@ -86,6 +86,8 @@
 }
 
 .form {
+  position: relative; /* CORREÇÃO: Para garantir que o formulário fique na frente */
+  z-index: 2; /* CORREÇÃO: Coloca o formulário sobre a imagem */
   display: flex;
   flex-direction: column;
   gap: 0.8em;
@@ -142,4 +144,40 @@
 
 .submit-button:hover {
   background-color: #01a87a;
+}
+
+@media (max-width: 780px) {
+  .container-talk-to-us {
+    padding: 3em 1em; 
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  .subtitle {
+    text-align: left;
+  }
+
+  .info-section,
+  .form-section {
+    max-width: 100%;
+  }
+  
+  .contact-details {
+    align-self: start;
+  }
+
+  .background-logo {
+    width: 80%;   /* Controla a largura para não vazar */
+    height: auto; /* Deixa a altura se ajustar automaticamente */
+  
+    top: 65%;     /* Ajusta a posição vertical */
+  }
 }
