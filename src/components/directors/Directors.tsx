@@ -22,14 +22,13 @@ function Directors() {
   const width = useWindowWidth()
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false, // sem loop
+    loop: false, 
     align: width < 768 ? "center" : "start",
   })
 
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(false)
 
-  // Atualiza os estados de navegação
   const updateButtons = useCallback(() => {
     if (!emblaApi) return
     setCanScrollPrev(emblaApi.canScrollPrev())
@@ -44,7 +43,6 @@ function Directors() {
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
 
-  // Atualiza os botões sempre que o carrossel muda ou a largura muda
   useEffect(() => {
     if (!emblaApi) return
 
@@ -79,7 +77,6 @@ function Directors() {
     )
   }
 
-  // Mobile e Tablet < 1024px
   return (
     <div className={styles["director"]}>
       <div className={styles["lideres-title"]}>NOSSOS LÍDERES</div>
