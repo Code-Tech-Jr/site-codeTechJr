@@ -23,7 +23,7 @@ function Home() {
         <TalkToUs/>
         <Directors/>
       </div>
-      {/*<Footer/>*/}
+      <Footer/>
     </>
   );
 }

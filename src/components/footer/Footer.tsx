@@ -1,170 +1,101 @@
-import global from "../../assets/styles/global.module.css"
-import styles from "./Footer.module.css"
-import { useState, useEffect } from "react";
+import styles from "./Footer.module.css";
 
-function useWindowWidth() {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    // Limpa o listener quando o componente for desmontado
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return width;
-}
-
+import logoCodeTech from "../../assets/images/logoEmpresaJr2.svg";
+import iconLocation from "../../assets/icons/localizationIcon.svg";
+import iconInstagram from "../../assets/icons/instagramIcon.svg";
+import iconLinkedin from "../../assets/icons/linkedinIcon.svg";
+import iconEmail from "../../assets/icons/emailIcon.svg";
+import logoUnesp from "../../assets/images/logoUnesp.svg";
+import logoFc from "../../assets/images/logoFc.svg";
+import logoDco from "../../assets/images/logoDco.svg";
 
 function Footer() {
-    const width = useWindowWidth();
+  const instagramLink = "https://instagram.com/";
+  const linkedinLink = "https://linkedin.com/company/";
 
-    if(width < 600)
-    {
-        return (
-            <div className={styles["container-footer"]}>
-                <div className={styles["copyright"]}>© Code Tech Junior – 2025 | Todos os direitos reservados | Política de Privacidade</div>
-                <div className={styles["container-logo-codetech"]}>
-                    <img src="src/assets/images/LogoEmpresaJr2.svg"></img>
-                    <div>CODE TECH JR</div>
-                </div>
-                <div className={styles["container-info"]}>
-                    <div className={styles["info-titulo"]}>CONTATO</div>
-                    <div className={styles["info-block"]}>
-                        <img className={styles["info-block-image"]}
-                            src="src/assets/icons/localizationIcon.svg">
-                        </img>
-                        <div className={styles["info-block-text"]}>Av. Eng. Luís Edmundo Carrijo Coube, 2085 - Nucleo Res. Pres. Geisel, Bauru - SP, 17033-360</div>
-                    </div>
-                    <div className={styles["info-block"]}>
-                        <img className={styles["info-block-image"]}
-                            src="src/assets/icons/instagramIcon.svg">
-                        </img>
-                        <div className={styles["info-block-text"]}>@INSTA</div>
-                    </div>
-                    <div className={styles["info-block"]}>
-                        <img className={styles["info-block-image"]}
-                            src="src/assets/icons/linkedinIcon.svg">
-                        </img>
-                        <div className={styles["info-block-text"]}>EJ</div>
-                    </div>
-                    <div className={styles["info-block"]}>
-                        <img className={styles["info-block-image"]}
-                            src="src/assets/icons/emailIcon.svg">
-                        </img>
-                        <div className={styles["info-block-text"]}>CODETECHJR@gmail.com</div>
-                    </div>
-                </div>
-                <div className={styles["container-logos-unesp"]}>
-                    <img src="src/assets/images/logoUnesp.svg"></img>
-                    <img src="src/assets/images/logoFc.svg"></img>
-                    <img src="src/assets/images/logoDco.svg"></img>
-                </div>
-            </div>
-        )
-    }
+  return (
+    <footer className={styles["container-footer"]} id="footer">
+      <div className={styles["container-left"]}>
+        <div className={styles["copyright"]}>
+          © Code Tech Junior – 2025 | Todos os direitos reservados | Política de
+          Privacidade
+        </div>
+        <div className={styles["container-logo-codetech"]}>
+          <img src={logoCodeTech} alt="Code Tech Jr Logo" />
+          <div>CODE TECH JR</div>
+        </div>
+        <ul className={styles["container-logos-unesp"]} aria-label="Logos Unesp e parceiros">
+          <li><img src={logoUnesp} alt="UNESP Logo" /></li>
+          <li><img src={logoFc} alt="FC Bauru Logo" /></li>
+          <li><img src={logoDco} alt="DCO Logo" /></li>
+        </ul>
+      </div>
 
-    else if(width < 1024)
-    {
-        return (
-            <div className={styles["container-footer"]}>
-                <div className={styles["copyright"]}>© Code Tech Junior – 2025 | Todos os direitos reservados | Política de Privacidade</div>
-                <div className={styles["container-central"]}>
-                    <div className={styles["container-logo-codetech"]}>
-                        <img src="src/assets/images/LogoEmpresaJr2.svg"></img>
-                        <div>CODE TECH JR</div>
-                    </div>
-                    <div className={styles["container-info"]}>
-                        <div className={styles["info-titulo"]}>CONTATO</div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/localizationIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>Av. Eng. Luís Edmundo Carrijo Coube, 2085 - Nucleo Res. Pres. Geisel, Bauru - SP, 17033-360</div>
-                        </div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/instagramIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>@INSTA</div>
-                        </div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/linkedinIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>EJ</div>
-                        </div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/emailIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>CODETECHJR@gmail.com</div>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles["container-logos-unesp"]}>
-                    <img src="src/assets/images/logoUnesp.svg"></img>
-                    <img src="src/assets/images/logoFc.svg"></img>
-                    <img src="src/assets/images/logoDco.svg"></img>
-                </div>
-            </div>
-        )
-    }
-    else
-    {
-        return (
-            <div className={styles["container-footer"]}>
-                <div className={styles["container-left"]}>
-                    <div className={styles["copyright"]}>© Code Tech Junior – 2025 | Todos os direitos reservados | Política de Privacidade</div>
-                    <div className={styles["container-logo-codetech"]}>
-                        <img src="src/assets/images/LogoEmpresaJr2.svg"></img>
-                        <div>CODE TECH JR</div>
-                    </div>
-                    <div className={styles["container-logos-unesp"]}>
-                        <img src="src/assets/images/logoUnesp.svg"></img>
-                        <img src="src/assets/images/logoFc.svg"></img>
-                        <img src="src/assets/images/logoDco.svg"></img>
-                    </div>
-                </div>
-                <div className={styles["container-right"]}>
-                    <div className={styles["container-info"]}>
-                        <div className={styles["info-titulo"]}>CONTATO</div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/localizationIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>Av. Eng. Luís Edmundo Carrijo Coube, 2085 - Nucleo Res. Pres. Geisel, Bauru - SP, 17033-360</div>
-                        </div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/instagramIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>@INSTA</div>
-                        </div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/linkedinIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>EJ</div>
-                        </div>
-                        <div className={styles["info-block"]}>
-                            <img className={styles["info-block-image"]}
-                                src="src/assets/icons/emailIcon.svg">
-                            </img>
-                            <div className={styles["info-block-text"]}>CODETECHJR@gmail.com</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
-
-
+      <div className={styles["container-right"]}>
+        <h2 className={styles["info-titulo"]}>CONTATO</h2>
+        
+        <ul className={styles["container-info"]}>
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconLocation}
+              alt="Localização"
+            />
+            <p className={styles["info-block-text"]}>
+              Av. Eng. Luís Edmundo Carrijo Coube, 2085 - Nucleo Res. Pres.
+              Geisel, Bauru - SP, 17033-360
+            </p>
+          </li>
+          
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconInstagram}
+              alt="Instagram"
+            />
+            <a
+              href={instagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles["info-block-text"]}
+            >
+              @INSTA
+            </a>
+          </li>
+          
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconLinkedin}
+              alt="LinkedIn"
+            />
+            <a
+              href={linkedinLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles["info-block-text"]}
+            >
+              EJ
+            </a>
+          </li>
+          
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconEmail}
+              alt="Email"
+            />
+            <a
+              href="mailto:CODETECHJR@gmail.com"
+              className={styles["info-block-text"]}
+            >
+              CODETECHJR@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

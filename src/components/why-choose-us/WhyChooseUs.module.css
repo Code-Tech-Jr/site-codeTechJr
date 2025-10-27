@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 .container-why-choose-us{
     background-color: var(--main-color);
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10em 2em 5em 2em; /* Ex: 10em em cima, 5em embaixo */
+    padding: 10em 2em 5em 2em;
 }
 
 .inner-container {
-    background-color: #0f1420;
+    background-color: var(--fifth-color);
     position: relative;
     border-radius: 28px;
     width: 100%;
@@ -40,8 +38,8 @@
     gap: clamp(4rem, 10vw, 15em);
 }
 
-.items-container > div {
-    font-family: "Raleway", sans-serif;
+.items-container > li {
+    font-family: var(--second-font), sans-serif;
     color: var(--second-color);
     font-size: 35px;
     font-weight: 500;
@@ -88,7 +86,7 @@
         gap: 3em;
     }
 
-    .items-container > div {
+    .items-container > li {
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -99,7 +97,7 @@
         white-space: normal;
     }
 
-    .items-container > div:nth-child(2) {
+    .items-container > li:nth-child(2) {
         flex-direction: row-reverse;
     }
 
@@ -110,13 +108,13 @@
 }
 
 @media (max-width: 700px) {
-    .items-container > div {
+    .items-container > li {
         flex-direction: column;
         white-space: normal; 
         font-size: 1.5em;
         gap: 0.5em;
     }
-    .items-container > div:nth-child(2) {
+    .items-container > li:nth-child(2) {
         flex-direction: column;
     }
     .items-container img {

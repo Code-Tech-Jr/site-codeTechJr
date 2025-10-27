@@ -1,6 +1,8 @@
+import React from 'react';
 
 export type CardProps = {
-    imgSrc: string;
-    title: React.ReactNode;
-    text: string;
+  imgSrc: string;
+  altText: string; 
+  title: React.ReactNode;
+  text: string;
 };

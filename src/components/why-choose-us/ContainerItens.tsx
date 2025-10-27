@@ -1,15 +1,21 @@
+import React from "react";
 
 type itensProps = {
     imgSrc: string;
     text: string;
+    as?: React.ElementType;
 }
 
-function ContainerItens({imgSrc, text}: itensProps){
+function ContainerItens({imgSrc, text, as: Component = 'div'}: itensProps){
     return (
-        <div>
-            <img src={imgSrc} alt={text}/>
+        <Component> 
+            <img 
+                src={imgSrc} 
+                alt="" 
+                aria-hidden="true"
+            />
             <p style={{ whiteSpace: "pre-line"}}>{text}</p>
-        </div>
+        </Component>
     )
 }
 

@@ -7,7 +7,6 @@ import vicePresidenteImg from "../../assets/images/Directors/vice_presidente.png
 import financeiroImg from "../../assets/images/Directors/diretor_financeiro.png"
 import marketingImg from "../../assets/images/Directors/diretor_marketing.png"
 import projetosImg from "../../assets/images/Directors/diretor_projeto.png"
-import { mark } from "framer-motion/client"
 
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth)
@@ -71,49 +70,55 @@ function Directors() {
 
   if (width > 1440) {
     return (
-      <div className={styles["director"]}>
-        <div className={styles["lideres-title"]}>NOSSOS LÍDERES</div>
-        <div className={styles["container-directors"]}>
+      <section className={styles["director"]}>
+        <h2 className={styles["lideres-title"]}>NOSSOS LÍDERES</h2>
+        <ul className={styles["container-directors"]}>
           {directors.map((d) => (
-            <DirectorCard key={d.name} imgSrc={d.src} position={d.position} name={d.name} />
+            <li key={d.name}>
+              <DirectorCard imgSrc={d.src} position={d.position} name={d.name} />
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </section>
     )
   }
 
   return (
-    <div className={styles["director"]}>
-      <div className={styles["lideres-title"]}>NOSSOS LÍDERES</div>
+    <section className={styles["director"]}>
+      <h2 className={styles["lideres-title"]}>NOSSOS LÍDERES</h2>
 
       <div className={styles["carousel-wrapper"]}>
         <button
           className={styles["embla__button"]}
           onClick={scrollPrev}
           style={{ backgroundColor: canScrollPrev ? "#01C38E" : "#555" }}
+          aria-label="Ver diretores anteriores"
+          disabled={!canScrollPrev}             
         >
           &#8592;
         </button>
 
-        <div className={styles["embla"]} ref={emblaRef}>
-          <div className={styles["embla__container"]}>
+        <div className={styles["embla"]} ref={emblaRef} aria-label="Carrossel de diretores">
+          <ul className={styles["embla__container"]}>
             {directors.map((d) => (
-              <div className={styles["embla__slide"]} key={d.name}>
+              <li className={styles["embla__slide"]} key={d.name}>
                 <DirectorCard imgSrc={d.src} position={d.position} name={d.name} />
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         <button
           className={styles["embla__button"]}
           onClick={scrollNext}
           style={{ backgroundColor: canScrollNext ? "#01C38E" : "#555" }}
+          aria-label="Ver próximos diretores" 
+          disabled={!canScrollNext}            
         >
           &#8594;
         </button>
       </div>
-    </div>
+    </section>
   )
 }
 

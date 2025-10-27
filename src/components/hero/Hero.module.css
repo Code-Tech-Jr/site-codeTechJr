@@ -28,7 +28,7 @@
 }
 
 .hero-title {
-    color: #ffff;
+    color: var(--four-color);
     font-family: var(--title-font);
     font-size: 80px;
     font-weight: 400;
