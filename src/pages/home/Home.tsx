@@ -15,8 +15,8 @@ function Home() {
     return(
     <>
       <Header/>
-      <div className="container">  
-        <Hero/>
+      <Hero/>
+      <div className={global.container}>  
         <AboutUs/>
         <OurServices/>
         <WhyChooseUs/>
