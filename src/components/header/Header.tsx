@@ -13,7 +13,7 @@ function Header() {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
       if (window.innerWidth > 1350) {
-        setMenuOpen(false); // fecha o menu se for para desktop
+        setMenuOpen(false);
       }
     };
 
@@ -21,16 +21,20 @@ function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isTablet = screenWidth <= 1350 && screenWidth > 768;
   const isMobile = screenWidth <= 768;
+  const isTablet = screenWidth <= 1350 && screenWidth > 768;
+  const isDesktop = screenWidth > 1350; // Mais fácil de ler
 
   return (
     <div className={styles["header-container"]} id="header">
-      <div className={styles.logo}>
-        <img src="src/assets/images/logo1.png" alt="logo" />
-      </div>
+      
+      {isDesktop && (
+        <div className={styles.logo}>
+          <img src="src/assets/images/logo1.png" alt="logo" />
+        </div>
+      )}
 
-      {isTablet && (
+      {(isTablet || isMobile) && (
         <div
           className={`${isAtTop ? styles["at-top-icon"] : styles["icon"]}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -39,36 +43,36 @@ function Header() {
         </div>
       )}
 
-      {(isMobile || !isTablet || menuOpen) && (
+      {(isDesktop || menuOpen) && (
         <div className={`${isAtTop ? styles["at-top"] : styles["mid-buttons"]}`}>
           <Button
             href="#header"
             nomeDoBotao="INÍCIO"
             variant="nav"
-            onClick={() => isTablet && setMenuOpen(false)}
+            onClick={() => (isTablet || isMobile) && setMenuOpen(false)}
           />
           <Button
             href="#aboutUs"
             nomeDoBotao="SOBRE"
             variant="nav"
-            onClick={() => isTablet && setMenuOpen(false)}
+            onClick={() =>(isTablet || isMobile) && setMenuOpen(false)}
           />
           <Button
             href="#ourServices"
             nomeDoBotao="SERVIÇOS"
             variant="nav"
-            onClick={() => isTablet && setMenuOpen(false)}
+            onClick={() => (isTablet || isMobile) && setMenuOpen(false)}
           />
           <Button
             href="#talkToUs"
             nomeDoBotao="CONTATO"
             variant="nav"
-            onClick={() => isTablet && setMenuOpen(false)}
+            onClick={() => (isTablet || isMobile) && setMenuOpen(false)}
           />
         </div>
       )}
 
-      {!isTablet && !isMobile && (
+      {isDesktop && (
         <div className={styles["right-button"]}>
           <Button href="#talkToUs" nomeDoBotao="FALE CONOSCO" variant="header" />
         </div>

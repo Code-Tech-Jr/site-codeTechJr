@@ -116,13 +116,17 @@
    
   }
 }
-
-@media (max-width:768px){
-  .icon {
-    display: none;
-  }
-  .at-top-icon {
-    display: none;
+@media (max-width: 768px) {
+  .mid-buttons,
+  .at-top {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-start;
+    transform: none; 
+    left: 0; 
+    top: 7.5em; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 1.5em 2em 1.5em 1.5em; 
   }
 }
-
