@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Neucha&display=swap');
 
-
-.container-directors{
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 2em;
-    gap: 2.5em;
-}
-
-.director
-{
+.director {
     background-color: #1A1E29;
     display: flex;
     justify-content: center;
@@ -20,25 +9,135 @@
     padding-bottom: 7em;
 }
 
-.lideres-title 
-{
+.lideres-title {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     padding-top: 1em;
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
     font-weight: 800;
     font-size: 45px;
-    background: linear-gradient(270deg, var(--second-color), var(--third-color), var(--four-color));
-    background-size: 600% 600%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 6s ease infinite;
+    color: #01C38E;
     text-shadow: 0 0 5px rgba(255,255,255,0.2);
 }
 
-@keyframes gradientMove 
-{
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Container para desktop >= 1024px */
+.container-directors {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2em;
+    gap: 2.5em;
+    max-width: 75vw;
+}
+
+/* === Embla Carousel === */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    width: 100%;
+    position: relative;
+}
+
+.embla {
+    overflow: hidden;
+    width: 80%;
+}
+
+.embla__container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.embla__slide {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Botões */
+.embla__button {
+    background-color: #01C38E;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: .5em .5em .5em .5em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.embla__button:first-child {
+    left: 1rem;
+}
+
+.embla__button:last-child {
+    right: 1rem; 
+}
+
+.embla__button:hover {
+    background-color: #132D46;
+}
+
+.embla__button:hover {
+    background-color: #132D46;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .embla__slide {
+        flex: 0 0 33%;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 1rem; 
+        gap: 0.5rem;
+    }
+
+    .embla {
+        flex: 1; 
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .embla__container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .embla__slide {
+        flex: 0 0 80%;
+    }
+
+    .embla__button {
+        position: relative; 
+        top: auto;
+        transform: none;
+        width: 3rem;
+        height: 3rem;
+        font-size: 16px;
+        flex-shrink: 0; 
+        z-index: 1000;
+    }
+
+    .lideres-title {
+        font-size: 32px;
+    }
 }
