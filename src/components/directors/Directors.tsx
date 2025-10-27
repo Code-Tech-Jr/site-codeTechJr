@@ -1,20 +1,120 @@
-import global from "../../assets/styles/global.module.css"
+import React, { useCallback, useEffect, useState } from "react"
+import useEmblaCarousel from "embla-carousel-react"
 import DirectorCard from "./DirectorCard"
-import styles from  "./Directors.module.css"
+import styles from "./Directors.module.css"
+import presidenteImg from "../../assets/images/Directors/presidente.png"
+import vicePresidenteImg from "../../assets/images/Directors/vice_presidente.png" // (Estou supondo os nomes dos arquivos)
+import financeiroImg from "../../assets/images/Directors/diretor_financeiro.png"
+import marketingImg from "../../assets/images/Directors/diretor_marketing.png"
+import projetosImg from "../../assets/images/Directors/diretor_projeto.png"
+import { mark } from "framer-motion/client"
+
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  return width
+}
 
 function Directors() {
+  const width = useWindowWidth()
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false, 
+    align: width < 768 ? "center" : "start",
+  })
+
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+
+  const updateButtons = useCallback(() => {
+    if (!emblaApi) return
+    setCanScrollPrev(emblaApi.canScrollPrev())
+    setCanScrollNext(emblaApi.canScrollNext())
+  }, [emblaApi])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    updateButtons()
+    emblaApi.on("select", updateButtons)
+    emblaApi.on("resize", updateButtons)
+
+    return () => {
+      emblaApi.off("select", updateButtons)
+      emblaApi.off("resize", updateButtons)
+    }
+  }, [emblaApi, updateButtons])
+
+  const directors = [
+    { name: "FRANJINHA", position: "PRESIDENTE" , src : presidenteImg},
+    { name: "LUIS ROS", position: "VICE-PRESIDENTE", src : vicePresidenteImg},
+    { name: "KAUÃ", position: "DIRETOR FINANCEIRO",  src : financeiroImg },
+    { name: "SOFIA", position: "DIRETORA DE MARKETING" , src : marketingImg},
+    { name: "MÁRIO", position: "DIRETOR DE PROJETOS" , src : projetosImg},
+  ]
+
+  if (width > 1440) {
     return (
-        <div className={styles["director"]}>
+      <div className={styles["director"]}>
         <div className={styles["lideres-title"]}>NOSSOS LÍDERES</div>
         <div className={styles["container-directors"]}>
-            <DirectorCard imgSrc="src/assets/images/directorPlaceHolder.png" position="PRESIDENTE" name="FRANJINHA"></DirectorCard>
-            <DirectorCard imgSrc="src/assets/images/directorPlaceHolder.png" position="VICE-PRESIDENTE" name="LUIS ROS"></DirectorCard>
-            <DirectorCard imgSrc="src/assets/images/directorPlaceHolder.png" position="DIRETOR FINANCEIRO" name="KAUÃ"></DirectorCard>
-            <DirectorCard imgSrc="src/assets/images/directorPlaceHolder.png" position="DIRETORA DE MARKETING" name="SOFIA"></DirectorCard>
-            <DirectorCard imgSrc="src/assets/images/directorPlaceHolder.png" position="DIRETOR DE PROJETOS" name="MÁRIO"></DirectorCard>
+          {directors.map((d) => (
+            <DirectorCard key={d.name} imgSrc={d.src} position={d.position} name={d.name} />
+          ))}
         </div>
-        </div>
+      </div>
     )
+  }
+
+  return (
+    <div className={styles["director"]}>
+      <div className={styles["lideres-title"]}>NOSSOS LÍDERES</div>
+
+      <div className={styles["carousel-wrapper"]}>
+        <button
+          className={styles["embla__button"]}
+          onClick={scrollPrev}
+          style={{ backgroundColor: canScrollPrev ? "#01C38E" : "#555" }}
+        >
+          &#8592;
+        </button>
+
+        <div className={styles["embla"]} ref={emblaRef}>
+          <div className={styles["embla__container"]}>
+            {directors.map((d) => (
+              <div className={styles["embla__slide"]} key={d.name}>
+                <DirectorCard imgSrc={d.src} position={d.position} name={d.name} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          className={styles["embla__button"]}
+          onClick={scrollNext}
+          style={{ backgroundColor: canScrollNext ? "#01C38E" : "#555" }}
+        >
+          &#8594;
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default Directors
