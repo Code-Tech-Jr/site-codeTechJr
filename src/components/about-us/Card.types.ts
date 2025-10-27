@@ -1,6 +1,6 @@
 
 export type CardProps = {
     imgSrc: string;
-    title: string;
+    title: React.ReactNode;
     text: string;
 };
