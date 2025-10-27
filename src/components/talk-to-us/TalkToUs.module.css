@@ -5,6 +5,7 @@
   justify-content: center;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
+  width: 100%;
 }
 
 .content-wrapper {
@@ -13,8 +14,8 @@
   flex-direction: row;
   justify-content: center;
   gap: 6em;
+  max-width: 75vw; /* O limite de congruência */
   width: 100%;
-  max-width: 1200px;
   flex-wrap: wrap;
 }
 
@@ -35,7 +36,6 @@
   flex-direction: column;
   flex: 1;
   min-width: 300px;
-  max-width: 450px;
   z-index: 2;
 }
 
@@ -43,7 +43,7 @@
   color: var(--second-color);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 45px;
+  font-size: clamp(2.25rem, 5vw, 2.8rem);
   text-align: left;
   margin-bottom: 0.5em;
 }
@@ -81,7 +81,6 @@
 .form-section {
   flex: 1;
   min-width: 300px;
-  max-width: 450px;
   z-index: 2;
 }
 
@@ -109,7 +108,7 @@
 .form-group input,
 .form-group textarea {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid var(--four-color);
   border-radius: 4px;
   padding: 0.8em;
   color: var(--four-color);
@@ -157,7 +156,6 @@
   }
 
   .title {
-    font-size: 36px;
     text-align: left;
   }
 
@@ -168,6 +166,7 @@
   .info-section,
   .form-section {
     max-width: 100%;
+    min-width: 0;
   }
   
   .contact-details {
