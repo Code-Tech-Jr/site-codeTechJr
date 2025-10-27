@@ -15,15 +15,15 @@ function Home() {
     return(
     <>
       <Header/>
-      <div className="container">  
-        <Hero/>
+      <Hero/>
+      <div>  
         <AboutUs/>
         <OurServices/>
         <WhyChooseUs/>
-        <TalkToUs/>
-        <Directors/>
+        {/*<TalkToUs/>
+        <Directors/>*/}
       </div>
-      <Footer/>
+      {/*<Footer/>*/}
     </>
   );
 }
