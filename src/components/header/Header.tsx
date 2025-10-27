@@ -23,7 +23,7 @@ function Header() {
 
   const isMobile = screenWidth <= 768;
   const isTablet = screenWidth <= 1350 && screenWidth > 768;
-  const isDesktop = screenWidth > 1350; // Mais fácil de ler
+  const isDesktop = screenWidth > 1350; 
 
   return (
     <div className={styles["header-container"]} id="header">
