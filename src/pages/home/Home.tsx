@@ -19,8 +19,8 @@ function Home() {
       <div>  
         <AboutUs/>
         <OurServices/>
-        {/*<WhyChooseUs/>
-        <TalkToUs/>
+        <WhyChooseUs/>
+        {/*<TalkToUs/>
         <Directors/>*/}
       </div>
       {/*<Footer/>*/}

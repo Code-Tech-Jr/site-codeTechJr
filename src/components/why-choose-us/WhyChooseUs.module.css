@@ -2,18 +2,20 @@
 
 .container-why-choose-us{
     background-color: var(--main-color);
-    height: 70vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10em 2em 5em 2em; /* Ex: 10em em cima, 5em embaixo */
 }
 
 .inner-container {
-    background-color: #101520;
+    background-color: #0f1420;
     position: relative;
     border-radius: 28px;
-    width: 100em;
-    height: 35em;
+    width: 100%;
+    max-width: 75vw;
+    height: auto;
     padding: 2em;
     display: flex;
     flex-direction: column;
@@ -29,14 +31,13 @@
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 3rem; 
-    margin-top: -3rem;
 }
 
 .items-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 12.5em;
+    gap: clamp(4rem, 10vw, 15em);
 }
 
 .items-container > div {
@@ -46,6 +47,10 @@
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
 }
 
 .items-container img {
@@ -53,4 +58,77 @@
     height: auto;
     padding: none;
     margin-bottom: 0.5em;
+}
+
+@media(max-width: 1900px) {
+    .inner-container {
+        padding: 1em 0.5em;
+        width: 95%;
+    }
+}
+
+@media(max-width: 1300px) {
+    .inner-container {
+        width: 90%;
+        padding: 2em 1em;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .why-choose-us-title {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+    }
+
+    .items-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .items-container > div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2em;
+        width: 80%;
+        font-size: 2em;
+        white-space: normal;
+    }
+
+    .items-container > div:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    .items-container img {
+        width: 140px;
+        margin-bottom: 0em;
+    }
+}
+
+@media (max-width: 700px) {
+    .items-container > div {
+        flex-direction: column;
+        white-space: normal; 
+        font-size: 1.5em;
+        gap: 0.5em;
+    }
+    .items-container > div:nth-child(2) {
+        flex-direction: column;
+    }
+    .items-container img {
+        width: 100px;
+    }
+    .items-container {
+        gap: 2em;
+    }
+}
+
+@media (max-width:350px) {
+    .why-choose-us-title{
+        font-size: 1.5em;
+    }
 }
