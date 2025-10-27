@@ -9,7 +9,6 @@ function TalkToUs() {
   return (
     <div className={styles["container-talk-to-us"]} id="talkToUs">
       <div className={styles["content-wrapper"]}>
-        <img src={backgroundLogo} alt="Code Tech Jr Logo Background" className={styles["background-logo"]} />
         <div className={styles["info-section"]}>
           <h1 className={styles.title}>Fale conosco</h1>
           <p className={styles.subtitle}>
@@ -56,6 +55,7 @@ function TalkToUs() {
         </div>
 
         <div className={styles["form-section"]}>
+          <img src={backgroundLogo} alt="Code Tech Jr Logo Background" className={styles["background-logo"]} />
           <form className={styles.form}>
             <div className={styles["form-group"]}>
               <label htmlFor="name">NOME</label>
