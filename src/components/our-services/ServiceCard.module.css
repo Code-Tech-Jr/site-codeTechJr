@@ -42,7 +42,7 @@
     color: var(--four-color);
     font-family: "Raleway";
     font-weight: 500;
-    text-align: left;
+    text-align: justify;
     text-justify: inter-word;
     font-size: clamp(1rem, 4vw, 1.6rem);
 }

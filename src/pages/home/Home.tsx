@@ -19,11 +19,11 @@ function Home() {
       <div>  
         <AboutUs/>
         <OurServices/>
-        <WhyChooseUs/>
+        {/*<WhyChooseUs/>
         <TalkToUs/>
-        <Directors/>
+        <Directors/>*/}
       </div>
-      <Footer/>
+      {/*<Footer/>*/}
     </>
   );
 }
