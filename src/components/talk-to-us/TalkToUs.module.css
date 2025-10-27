@@ -3,7 +3,7 @@
   padding: 5em 2em;
   display: flex;
   justify-content: center;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--second-font), sans-serif;
   overflow: hidden;
   width: 100%;
 }
@@ -14,7 +14,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 6em;
-  max-width: 75vw; /* O limite de congruência */
+  max-width: 75vw;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -73,6 +73,11 @@
   font-weight: 500;
 }
 
+.info-block a {
+   text-decoration: none;
+   color: var(--four-color);
+}
+
 .info-icon {
   width: 28px;
   height: 28px;
@@ -128,7 +133,7 @@
 
 .submit-button {
   background-color: var(--second-color);
-  color: #ffff;
+  color: var(--four-color);
   border: none;
   padding: 1em;
   font-size: 1em;
@@ -142,7 +147,7 @@
 }
 
 .submit-button:hover {
-  background-color: #01a87a;
+  background-color: var(--second-color);
 }
 
 @media (max-width: 780px) {

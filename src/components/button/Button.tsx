@@ -1,16 +1,35 @@
-import global from "../../assets/styles/global.module.css"
 import styles from "./Button.module.css";
-import type {ButtonProps} from "./Button.types.ts"
-
+import type { ButtonProps } from "./Button.types.ts";
 
 export default function Button({
   nomeDoBotao,
-  href = "#",
+  href,
   variant,
+  onClick,
+  type = "button",
+  className = "",
 }: ButtonProps) {
+  
+  const combinedClassName = `${styles[variant]} ${styles.button} ${className}`;
+
+  if (href) {
+    return (
+      <a 
+        className={combinedClassName} 
+        href={href} 
+        onClick={onClick}
+      >
+        {nomeDoBotao}
+      </a>
+    );
+  }
   return (
-    <a className={`${styles[variant]} ${styles.button}`} href={href}>
+    <button 
+      className={combinedClassName} 
+      onClick={onClick} 
+      type={type}
+    >
       {nomeDoBotao}
-    </a>
+    </button>
   );
 }

@@ -4,6 +4,9 @@ import styles from "./Header.module.css";
 import Button from "../button/Button";
 import { useIsAtTop } from "../../hooks/use-is-at-top";
 
+import logoImg from "../../assets/images/logo1.png";
+import menuIcon from "../../assets/icons/menuIcon.svg";
+
 function Header() {
   const isAtTop = useIsAtTop();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,25 +29,28 @@ function Header() {
   const isDesktop = screenWidth > 1350; 
 
   return (
-    <div className={styles["header-container"]} id="header">
+    <header className={styles["header-container"]} id="header">
       
       {isDesktop && (
         <div className={styles.logo}>
-          <img src="src/assets/images/logo1.png" alt="logo" />
+          <img src={logoImg} alt="Logo da Code Tech Jr" />
         </div>
       )}
 
       {(isTablet || isMobile) && (
-        <div
+        <button
+          type="button"
           className={`${isAtTop ? styles["at-top-icon"] : styles["icon"]}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuOpen}
         >
-          <img src="src/assets/icons/menuIcon.svg" alt="icon" />
-        </div>
+          <img src={menuIcon} alt="" />
+        </button>
       )}
 
       {(isDesktop || menuOpen) && (
-        <div className={`${isAtTop ? styles["at-top"] : styles["mid-buttons"]}`}>
+        <nav className={`${isAtTop ? styles["at-top"] : styles["mid-buttons"]}`}>
           <Button
             href="#header"
             nomeDoBotao="INÍCIO"
@@ -69,7 +75,7 @@ function Header() {
             variant="nav"
             onClick={() => (isTablet || isMobile) && setMenuOpen(false)}
           />
-        </div>
+        </nav>
       )}
 
       {isDesktop && (
@@ -77,7 +83,7 @@ function Header() {
           <Button href="#talkToUs" nomeDoBotao="FALE CONOSCO" variant="header" />
         </div>
       )}
-    </div>
+    </header>
   );
 }
 

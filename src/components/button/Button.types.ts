@@ -1,6 +1,10 @@
+import React from 'react';
+
 export type ButtonProps = {
-  nomeDoBotao: string;
+  nomeDoBotao: React.ReactNode; 
   href?: string;
   variant: "header" | "nav" | "main" | "hero";
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+  type?: 'button' | 'submit' | 'reset';
+  className?: string; 
 };

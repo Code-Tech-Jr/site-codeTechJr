@@ -1,41 +1,101 @@
-import global from "../../assets/styles/global.module.css"
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
+
+import logoCodeTech from "../../assets/images/logoEmpresaJr2.svg";
+import iconLocation from "../../assets/icons/localizationIcon.svg";
+import iconInstagram from "../../assets/icons/instagramIcon.svg";
+import iconLinkedin from "../../assets/icons/linkedinIcon.svg";
+import iconEmail from "../../assets/icons/emailIcon.svg";
+import logoUnesp from "../../assets/images/logoUnesp.svg";
+import logoFc from "../../assets/images/logoFc.svg";
+import logoDco from "../../assets/images/logoDco.svg";
 
 function Footer() {
-    return (
-        <div className={styles["container-footer"]}>
-            <div className={styles["container-logos"]}>
-                <div className={styles["container-logo-codetech"]}>
-                    <img className = {styles["logo-empresa-jr"]}src="src/assets/images/logoEmpresaJr.svg"></img>
-                    <div className={styles["logo-text"]}>CODE TECH JR</div>
-                </div>
-                <div className={styles["container-logos-unesp"]}>
-                    <img src="src/assets/images/logoUnesp.svg" className={styles["logo-unesp-footer"]}></img>
-                    <img src="src/assets/images/logoFc.svg" className={styles["logo-fc-footer"]}></img>
-                    <img src="src/assets/images/logoDco.svg" className={styles["logo-dco-footer"]}></img>
-                </div>
-            </div>
-            <div className={styles["container-info"]}>
-                <div className={styles["contato-text"]}>Contato</div>
-                <div className={styles["info-block"]}>
-                    <img className={styles["info-block-image"]} src="src/assets/icons/localizationIcon.svg"></img>
-                    <div className={`${styles["info-text"]} ${styles.end}` }>Av. Eng. Luís Edmundo Carrijo Coube, 2085 - Nucleo Res. Pres. Geisel, Bauru - SP, 17033-360</div>
-                </div>
-                <div className={styles["info-block"]}>
-                    <img className={styles["info-block-image"]} src="src/assets/icons/emailIcon.svg"></img>
-                    <div className={styles["info-text"]}>CodeTechJr@gmail.com.br</div>
-                </div>
-                <div className={styles["info-block"]}>
-                    <img className={styles["info-block-image"]} src="src/assets/icons/instagramIcon.svg"></img>
-                    <div className={styles["info-text"]}>Instagram</div>
-                </div>
-                <div className={styles["info-block"]}>
-                    <img className={styles["info-block-image"]} src="src/assets/icons/linkedinIcon.svg"></img>
-                    <div className={styles["info-text"]}>Linkedin</div>
-                </div>
-            </div>
+  const instagramLink = "https://instagram.com/";
+  const linkedinLink = "https://linkedin.com/company/";
+
+  return (
+    <footer className={styles["container-footer"]} id="footer">
+      <div className={styles["container-left"]}>
+        <div className={styles["copyright"]}>
+          © Code Tech Junior – 2025 | Todos os direitos reservados | Política de
+          Privacidade
         </div>
-    )
+        <div className={styles["container-logo-codetech"]}>
+          <img src={logoCodeTech} alt="Code Tech Jr Logo" />
+          <div>CODE TECH JR</div>
+        </div>
+        <ul className={styles["container-logos-unesp"]} aria-label="Logos Unesp e parceiros">
+          <li><img src={logoUnesp} alt="UNESP Logo" /></li>
+          <li><img src={logoFc} alt="FC Bauru Logo" /></li>
+          <li><img src={logoDco} alt="DCO Logo" /></li>
+        </ul>
+      </div>
+
+      <div className={styles["container-right"]}>
+        <h2 className={styles["info-titulo"]}>CONTATO</h2>
+        
+        <ul className={styles["container-info"]}>
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconLocation}
+              alt="Localização"
+            />
+            <p className={styles["info-block-text"]}>
+              Av. Eng. Luís Edmundo Carrijo Coube, 2085 - Nucleo Res. Pres.
+              Geisel, Bauru - SP, 17033-360
+            </p>
+          </li>
+          
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconInstagram}
+              alt="Instagram"
+            />
+            <a
+              href={instagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles["info-block-text"]}
+            >
+              @INSTA
+            </a>
+          </li>
+          
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconLinkedin}
+              alt="LinkedIn"
+            />
+            <a
+              href={linkedinLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles["info-block-text"]}
+            >
+              EJ
+            </a>
+          </li>
+          
+          <li className={styles["info-block"]}>
+            <img
+              className={styles["info-block-image"]}
+              src={iconEmail}
+              alt="Email"
+            />
+            <a
+              href="mailto:CODETECHJR@gmail.com"
+              className={styles["info-block-text"]}
+            >
+              CODETECHJR@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

@@ -5,16 +5,22 @@ import styles from "./WhyChooseUs.module.css"
 
 function WhyChooseUs(){
     return (
-        <div className={styles["container-why-choose-us"]}>
+        <section 
+            className={styles["container-why-choose-us"]}
+            aria-labelledby="why-choose-us-title"
+        >
             <div className={styles["inner-container"]}>
-                <h1 className={styles["why-choose-us-title"]}>Por que nos escolher?</h1>
-                <div className={styles["items-container"]}>
-                    <ContainerItens imgSrc={"src/assets/images/WhyChooseUs/qualidade.png"} text={"QUALIDADE"}/>
-                    <ContainerItens imgSrc={"src/assets/images/WhyChooseUs/aprendizado.png"} text={"APRENDIZADO\nCONTÍNUO"}/>
-                    <ContainerItens imgSrc={"src/assets/images/WhyChooseUs/custo-beneficio.png"} text={"CUSTO BENEFÍCIO"}/>
-                </div>
+                <h2 id="why-choose-us-title" className={styles["why-choose-us-title"]}>
+                    Por que nos escolher?
+                </h2>
+
+                <ul className={styles["items-container"]}>
+                    <ContainerItens as="li" imgSrc={"src/assets/images/WhyChooseUs/qualidade.png"} text={"QUALIDADE"}/>
+                    <ContainerItens as="li" imgSrc={"src/assets/images/WhyChooseUs/aprendizado.png"} text={"APRENDIZADO\nCONTÍNUO"}/>
+                    <ContainerItens as="li" imgSrc={"src/assets/images/WhyChooseUs/custo-beneficio.png"} text={"CUSTO BENEFÍCIO"}/>
+                </ul>
             </div>
-        </div>
+        </section>
 
     )
 }

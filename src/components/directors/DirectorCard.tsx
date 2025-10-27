@@ -11,11 +11,14 @@ interface DirectorCardProps
 
 function DirectorCard({ imgSrc, position, name }: DirectorCardProps)
 {
+    const altDescription = `Foto de ${name}, ${position}`;
+
     return(
         <SpotlightCard className={styles["director-card-container"]} spotlightColor="rgba(255, 255, 255, 0.25)">
-            <img src={imgSrc} className={styles["director-card-image"]}></img>
-            <div className={styles["director-card-position"]}>{position}</div>
-            <div className={styles["director-card-name"]}>{name}</div>
+            <img src={imgSrc} className={styles["director-card-image"]} alt={altDescription} />
+            <p className={styles["director-card-position"]}>{position}</p>            
+            <h3 className={styles["director-card-name"]}>{name}</h3>
+
         </SpotlightCard>
     )
 }

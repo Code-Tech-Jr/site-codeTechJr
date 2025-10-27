@@ -30,7 +30,7 @@
 
 .hero {
     background-color: var(--second-color);
-    color: #ffff;
+    color: var(--four-color);
     border: 0.1em solid var(--second-color);
     padding: 20px;
     width: 9em;
