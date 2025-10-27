@@ -2,7 +2,12 @@ import React, { useCallback, useEffect, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import DirectorCard from "./DirectorCard"
 import styles from "./Directors.module.css"
-import placeholder from "../../assets/images/directorPlaceHolder.png"
+import presidenteImg from "../../assets/images/Directors/presidente.png"
+import vicePresidenteImg from "../../assets/images/Directors/vice_presidente.png" // (Estou supondo os nomes dos arquivos)
+import financeiroImg from "../../assets/images/Directors/diretor_financeiro.png"
+import marketingImg from "../../assets/images/Directors/diretor_marketing.png"
+import projetosImg from "../../assets/images/Directors/diretor_projeto.png"
+import { mark } from "framer-motion/client"
 
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth)
@@ -57,20 +62,20 @@ function Directors() {
   }, [emblaApi, updateButtons])
 
   const directors = [
-    { name: "FRANJINHA", position: "PRESIDENTE" },
-    { name: "LUIS ROS", position: "VICE-PRESIDENTE" },
-    { name: "KAUÃ", position: "DIRETOR FINANCEIRO" },
-    { name: "SOFIA", position: "DIRETORA DE MARKETING" },
-    { name: "MÁRIO", position: "DIRETOR DE PROJETOS" },
+    { name: "FRANJINHA", position: "PRESIDENTE" , src : presidenteImg},
+    { name: "LUIS ROS", position: "VICE-PRESIDENTE", src : vicePresidenteImg},
+    { name: "KAUÃ", position: "DIRETOR FINANCEIRO",  src : financeiroImg },
+    { name: "SOFIA", position: "DIRETORA DE MARKETING" , src : marketingImg},
+    { name: "MÁRIO", position: "DIRETOR DE PROJETOS" , src : projetosImg},
   ]
 
-  if (width > 1024) {
+  if (width > 1440) {
     return (
       <div className={styles["director"]}>
         <div className={styles["lideres-title"]}>NOSSOS LÍDERES</div>
         <div className={styles["container-directors"]}>
           {directors.map((d) => (
-            <DirectorCard key={d.name} imgSrc={placeholder} position={d.position} name={d.name} />
+            <DirectorCard key={d.name} imgSrc={d.src} position={d.position} name={d.name} />
           ))}
         </div>
       </div>
@@ -94,7 +99,7 @@ function Directors() {
           <div className={styles["embla__container"]}>
             {directors.map((d) => (
               <div className={styles["embla__slide"]} key={d.name}>
-                <DirectorCard imgSrc={placeholder} position={d.position} name={d.name} />
+                <DirectorCard imgSrc={d.src} position={d.position} name={d.name} />
               </div>
             ))}
           </div>

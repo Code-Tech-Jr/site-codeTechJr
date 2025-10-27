@@ -21,7 +21,7 @@ function Home() {
         <OurServices/>
         <WhyChooseUs/>
         <TalkToUs/>
-        {/*<Directors/>*/}
+        <Directors/>
       </div>
       {/*<Footer/>*/}
     </>

@@ -20,6 +20,7 @@
     border-color: linear-gradient(#0093DD, #132D46);
     width: 12em;
     height: 12em;
+    object-fit: cover;
 }
 
 .director-card-position
