@@ -5,6 +5,7 @@ import styles from "./Hero.module.css"
 function Hero() {
     return (
         <div className={styles["container-hero"]}>
+            <img src="src/assets/images/Hero/logo-empresa-jr.svg" alt="Logo Code Tech Jr" className={styles["hero-logo"]}></img>
             <h1 className={styles["hero-title"]}>A tecnologia que{'\n'} fala a <span className={styles["highlight"]}>sua</span> língua</h1>
             <div className={styles["hero-buttons"]}>
                 <Button nomeDoBotao="NOSSOS SERVIÇOS" href="#ourServices" variant="hero"/>
