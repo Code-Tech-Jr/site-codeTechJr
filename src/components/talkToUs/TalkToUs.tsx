@@ -1,4 +1,3 @@
-import favicon from '../../../public/images/favicon.png'
 import ContactForm from '../contactForm/ContatcForm'
 import InfoBlock from '../infoBlock/InfoBlock'
 import { DATA_INFO } from '../infoBlock/InfoBlock.data'
@@ -11,7 +10,7 @@ function TalkToUs() {
       <Content className="relative flex-col gap-10 md:flex-row md:gap-30">
         <img
           className="animate-glow absolute top-1/2 left-1/2 w-70 -translate-x-1/2 -translate-y-1/2 opacity-15"
-          src={favicon}
+          src="/images/favicon.png"
           alt=""
         />
         <div className="w-full md:w-1/2">

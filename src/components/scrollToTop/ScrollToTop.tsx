@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import arrowUp from '../../../public/images/arrowUp.svg'
 
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
@@ -28,7 +27,11 @@ function ScrollToTop() {
       className="animate-in fade-in zoom-in fixed right-6 bottom-6 z-99 cursor-pointer rounded-2xl bg-white/20 p-3 shadow-2xl backdrop-blur-[15px] backdrop-saturate-180 transition-all duration-300 hover:scale-110 active:scale-95"
       aria-label="Voltar ao topo"
     >
-      <img src={arrowUp} alt="flecha para cima" className="h-6 w-6" />
+      <img
+        src="/images/arrowUp.svg"
+        alt="flecha para cima"
+        className="h-6 w-6"
+      />
     </button>
   )
 }

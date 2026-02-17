@@ -24,31 +24,27 @@ function Footer() {
           <div className="flex w-full flex-row flex-wrap items-center justify-center gap-[1.5em] sm:gap-[2em] lg:items-start lg:justify-start lg:gap-5">
             {isDesktop && (
               <div className="mb-4 flex w-full items-center gap-3 text-xl font-bold text-white">
-                <img
-                  src="public/images/favicon.png"
-                  className="w-20"
-                  alt="Favicon"
-                />
+                <img src="/images/favicon.png" className="w-20" alt="Favicon" />
                 <span className="text-3xl tracking-widest">CODE TECH JR</span>
               </div>
             )}
             <img
-              src="public/images/logo.png"
+              src="/images/logo.png"
               className="h-50 w-auto object-contain lg:hidden lg:w-full"
               alt="Logo Code Tech Jr"
             />
             <img
-              src="public/images/logoUnesp.svg"
+              src="/images/logoUnesp.svg"
               className="hidden h-10 w-auto object-contain sm:h-15"
               alt="Logo Unesp"
             />
             <img
-              src="public/images/logoFc.svg"
+              src="/images/logoFc.svg"
               className="hidden h-10 w-auto object-contain sm:h-15"
               alt="Logo Faculdade de Ciências"
             />
             <img
-              src="public/images/logoDco.svg"
+              src="/images/logoDco.svg"
               className="hidden h-10 w-auto object-contain sm:h-15"
               alt="Logo do Departamento de Computação"
             />
