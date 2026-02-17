@@ -1,7 +1,7 @@
 export const DATA_DIRECTORS = [
   {
     id: 1,
-    img: 'src/assets/img/presidente.png',
+    img: 'public/images/presidente.png',
     name: 'Luis Nogueira',
     description: 'Presidente',
     coords:
@@ -10,7 +10,7 @@ export const DATA_DIRECTORS = [
   },
   {
     id: 2,
-    img: 'src/assets/img/vice_presidente.png',
+    img: 'public/images/vice_presidente.png',
     name: 'Luis Ros',
     description: 'Vice-Presidente',
     coords:
@@ -19,7 +19,7 @@ export const DATA_DIRECTORS = [
   },
   {
     id: 3,
-    img: 'src/assets/img/diretor_administrativo.png',
+    img: 'public/images/diretor_administrativo.png',
     name: 'Kauã Esperança',
     description: 'Diretor Administrativo',
     coords:
@@ -28,7 +28,7 @@ export const DATA_DIRECTORS = [
   },
   {
     id: 4,
-    img: 'src/assets/img/diretor_comercial_marketing.png',
+    img: 'public/images/diretor_comercial_marketing.png',
     name: 'Sofia Centurione',
     description: 'Diretora de Comercial e de Marketing',
     coords:
@@ -37,7 +37,7 @@ export const DATA_DIRECTORS = [
   },
   {
     id: 5,
-    img: 'src/assets/img/diretor_projeto.png',
+    img: 'public/images/diretor_projeto.png',
     name: 'Mário Mukai',
     description: 'Diretor de Projetos',
     coords:

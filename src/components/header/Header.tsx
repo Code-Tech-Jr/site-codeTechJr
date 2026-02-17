@@ -1,4 +1,4 @@
-import logo from '../../assets/img/logo.png'
+import logo from '../../../public/images/logo.png'
 import { useBreakpoint } from '../../hooks/useBreakpoint'
 import Navbar from '../navbar/Navbar'
 import Button from '../ui/button/Button'

@@ -1,5 +1,5 @@
-import bgHero from '../../assets/img/bgHero.png'
-import logo from '../../assets/img/logo.png'
+import bgHero from '../../../public/images/bgHero.png'
+import logo from '../../../public/images/logo.png'
 import { useBreakpoint } from '../../hooks/useBreakpoint'
 import Button from '../ui/button/Button'
 import Container from '../ui/container/Container'

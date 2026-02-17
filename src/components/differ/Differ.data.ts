@@ -2,16 +2,16 @@ export const DATA_DIFFER = [
   {
     id: 1,
     text: 'Qualidade',
-    img: 'src/assets/icons/qualidade_servico_clean.png',
+    img: 'public/images/qualidade_servico_clean.png',
   },
   {
     id: 2,
     text: 'Aprendizado Contínuo',
-    img: 'src/assets/icons/aprendizado_continuo.png',
+    img: 'public/images/aprendizado_continuo.png',
   },
   {
     id: 3,
     text: 'Custo Benefício',
-    img: 'src/assets/icons/custo_beneficio_mao_moeda.png',
+    img: 'public/images/custo_beneficio_mao_moeda.png',
   },
 ]
