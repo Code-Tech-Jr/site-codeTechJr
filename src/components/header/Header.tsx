@@ -1,4 +1,3 @@
-import logo from '../../../public/images/logo.png'
 import { useBreakpoint } from '../../hooks/useBreakpoint'
 import Navbar from '../navbar/Navbar'
 import Button from '../ui/button/Button'
@@ -23,7 +22,11 @@ function Header() {
       <Content className="items-center justify-between">
         <Navbar />
         {isDesktop && (
-          <img src={logo} alt="logo CodeTechJr" className="animate-glow w-52" />
+          <img
+            src="/images/logo.png"
+            alt="logo CodeTechJr"
+            className="animate-glow w-52"
+          />
         )}
 
         {isDesktop && (

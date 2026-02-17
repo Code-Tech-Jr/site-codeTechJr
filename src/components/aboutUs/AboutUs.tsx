@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import aboutUsImg from '../../../public/images/aboutUsPlaceHolder.jpeg'
 import Container from '../ui/container/Container'
 import Content from '../ui/content/Content'
 import TitleSection from '../ui/titleSection/TitleSection'
@@ -25,7 +24,7 @@ function AboutUs() {
       >
         <div className="w-full lg:w-1/2">
           <img
-            src={aboutUsImg}
+            src="/images/aboutUsPlaceHolder.jpeg"
             alt="Foto da empresa Code Tech Jr"
             className="block w-full rounded-3xl object-cover"
           />

@@ -1,5 +1,3 @@
-import bgHero from '../../../public/images/bgHero.png'
-import logo from '../../../public/images/logo.png'
 import { useBreakpoint } from '../../hooks/useBreakpoint'
 import Button from '../ui/button/Button'
 import Container from '../ui/container/Container'
@@ -24,7 +22,7 @@ function Hero() {
   return (
     <Container as="section" className="relative z-10 h-screen overflow-hidden">
       <img
-        src={bgHero}
+        src="/images/bgHero.png"
         alt=""
         className="animate-pulse-slow absolute inset-0 z-[-1] h-screen w-full mask-[radial-gradient(circle,black_0%,transparent_70%)] object-cover"
       />
@@ -33,7 +31,7 @@ function Hero() {
       <Content className="flex-col py-20">
         {!isDesktop && (
           <img
-            src={logo}
+            src="/images/logo.png"
             alt="logo CodeTechJr"
             className="w-[50vw] max-w-112.5 min-w-50 drop-shadow-[0_0_15px_#01C38E66] filter"
           />
