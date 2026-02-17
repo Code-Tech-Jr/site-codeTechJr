@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import aboutUsImg from '../../assets/img/aboutUsPlaceHolder.jpeg'
+import aboutUsImg from '../../../public/images/aboutUsPlaceHolder.jpeg'
 import Container from '../ui/container/Container'
 import Content from '../ui/content/Content'
 import TitleSection from '../ui/titleSection/TitleSection'

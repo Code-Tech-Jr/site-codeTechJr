@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import arrowUp from '../../assets/icons/arrowUp.svg'
+import arrowUp from '../../../public/images/arrowUp.svg'
 
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)

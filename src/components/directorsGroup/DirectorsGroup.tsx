@@ -20,7 +20,7 @@ function DirectorsGroup() {
   return (
     <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl transition-all duration-750 ease-in-out hover:scale-105">
       <img
-        src="src/assets/img/directosGroup.jpeg"
+        src="public/images/directosGroup.jpeg"
         useMap="#image-map"
         alt="Diretoria Code Tech Jr"
         className="block h-auto w-full transition-opacity duration-500"

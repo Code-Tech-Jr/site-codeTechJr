@@ -66,7 +66,7 @@ function DirectorsCarousel() {
               }}
             >
               <img
-                src="src/assets/icons/favicon.png"
+                src="public/images/favicon.png"
                 className="w-16 opacity-10"
                 alt=""
               />
